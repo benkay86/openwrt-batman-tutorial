@@ -83,7 +83,7 @@ From the drop-down menu `Protocol` select `Batman Device`. Give the device a nam
 
 You can accept most of the default options. Navigate to the `Mesh Routing` tab to make a few recommended changes.
 
-![image](images/screenshot-bat0-edit-mesh.png)
+![image](images/screenshot-bat0-edit-mesh-server.png)
 
 First, select the `Routing Algorithm` you want. You can use either `BATMAN_IV` or `BATMAN_V`. All mesh nodes must be configured to use the same version of the batman protocol. Next, check the box to `Avoid Bridge Loops`. Finally, I recommend setting `Gateway Mode` to `Server` to explicitly tell batman that this router will be a gateway to the Internet. (Later, when configuring client nodes, we will set `Gateway Mode` to `Client`.)
 
@@ -210,7 +210,7 @@ Finally, navigate to `System > Startup` and sisable the `dnsmasq`, `firewall`, a
 
 Now it is safe to setup `bat0`, `batmesh`, 802.11s, and access points on your client node using exactly the same steps as you used for the gateway node above. When configuring the `bat0` interface, go to the `Mesh Routing` tab and make sure you set `Gateway Mode` to `Client` or `Off` on the client nodes.
 
-![image](images/screenshot-bat0-edit-mesh.png)
+![image](images/screenshot-bat0-edit-mesh-client.png)
 
 When you are done, devices should be able to connect to the client node wirelessly (via its acces point) or over its ethernet LAN port and access the Internet.
 
